@@ -1,5 +1,5 @@
 /**
- * Created by Agus on 6/5/2017.
+ * Created by Luciano on 6/5/2017.
  */
 
 /**
@@ -34,6 +34,24 @@ function cambiarUnidades(id, valor) {
         document.lasUnidades.unid_pulgada.value= 35.999964 * valor;
         document.lasUnidades.unid_pie.value= 2.999997 * valor;
     }
+}
 
+/**
+ * Conversión de Unidades Grados a Radianes
+ * @method convertirGR
+ * @param {string} id - El id de los inputs radianes y grados
+ * @return
+ */
 
+function convertirGR(id){
+    var grad, rad;
+    if (id=="grados") {
+        grad = document.getElementById("grados").value;
+        rad = (grad*Math.PI)/180;
+    }else if(id=="radianes"){
+        rad = document.getElementById("radianes").value;
+        grad = (rad*180)/Math.PI;
+    }
+    document.getElementById("grados").value = grad;
+    document.getElementById("radianes").value = rad;
 }
