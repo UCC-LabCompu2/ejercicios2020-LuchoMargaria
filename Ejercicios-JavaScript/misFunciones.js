@@ -55,3 +55,18 @@ function convertirGR(id){
     document.getElementById("grados").value = grad;
     document.getElementById("radianes").value = rad;
 }
+
+/**
+ * Mostrar o Ocultar elementos
+ * @method mostrar_ocultar
+ * @param {string} id - El id del input divMo
+ * @return
+ */
+
+function mostrar_ocultar(valorMo) {
+    if (valorMo=="val_mostrar"){
+        document.getElementById("divMO").style.display='block';
+    }else if(valorMo=="val_ocultar"){
+        document.getElementById("divMO").style.display='none';
+    }
+}
