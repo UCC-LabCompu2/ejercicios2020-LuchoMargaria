@@ -98,7 +98,7 @@ function calcularSuma() {
 
     num1=document.getElementsByName("sum_num1")[0].value;
     num2=document.getElementsByName("sum_num2")[0].value;
-    document.getElementsByName("sum_total")[0].value= Number(num1)+Number(num2);
+    document.getElementsByName("sum_total")[0].innerHTML= Number(num1)+Number(num2);
 }
 
 function calcularResta() {
@@ -106,7 +106,7 @@ function calcularResta() {
 
     num1=document.getElementsByName("res_num1")[0].value;
     num2=document.getElementsByName("res_num2")[0].value;
-    document.getElementsByName("res_total")[0].value= Number(num1)-Number(num2);
+    document.getElementsByName("res_total")[0].innerHTML= Number(num1)-Number(num2);
 }
 
 function calcularMult() {
@@ -114,7 +114,7 @@ function calcularMult() {
 
     num1=document.getElementsByName("mul_num1")[0].value;
     num2=document.getElementsByName("mul_num2")[0].value;
-    document.getElementsByName("mul_total")[0].value= Number(num1)*Number(num2);
+    document.getElementsByName("mul_total")[0].innerHTML= Number(num1)*Number(num2);
 }
 
 function calcularDiv() {
@@ -122,5 +122,5 @@ function calcularDiv() {
 
     num1=document.getElementsByName("div_num1")[0].value;
     num2=document.getElementsByName("div_num2")[0].value;
-    document.getElementsByName("div_total")[0].value= Number(num1)/Number(num2);
+    document.getElementsByName("div_total")[0].innerHTML= Number(num1)/Number(num2);
 }
