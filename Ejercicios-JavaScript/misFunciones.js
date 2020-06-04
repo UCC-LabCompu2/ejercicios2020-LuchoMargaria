@@ -158,3 +158,75 @@ function dibujarCirCuad(){
     ctx.stroke();
     ctx.fill();
 }
+
+var bandera;
+
+function dibujar(event) {
+    var canvas = document.getElementById("canvasPaint");
+    var ctx = canvas.getContext("2d");
+
+    var posX = event.clientX;
+    var posY = event.clientY;
+    console.log(posX,posY);
+
+    canvas.onmousedown = function(){bandera = true};
+    canvas.onmouseup = function(){bandera = false};
+
+    if (bandera == true) {
+        ctx.fillRect(posX, posY, 5, 5);
+        ctx.fill;
+    }
+}
+
+function limpiarCanvas(){
+    var canvas = document.getElementById("canvasPaint");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+}
+
+function dibujarCuadriculado() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    var anchoMax = canvas.width;
+    var alturaMax = canvas.height;
+
+    //Lineas Horizontales
+    ctx.beginPath();
+    for(var i=0;i<alturaMax;) {
+        ctx.moveTo(0, i);
+        ctx.lineTo(anchoMax,i);
+        ctx.strokeStyle = "#3e67d9";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath();
+
+    //Lineas Verticales
+    ctx.beginPath();
+    for(var i=0;i<anchoMax;) {
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i,alturaMax);
+        ctx.strokeStyle = "#3e67d9";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath();
+
+    //Eje X
+    ctx.beginPath();
+    ctx.moveTo(0,alturaMax/2);
+    ctx.lineTo(anchoMax,alturaMax/2);
+    ctx.strokeStyle = "#ff0058";
+    ctx.stroke();
+    ctx.closePath();
+
+    //Eje Y
+    ctx.beginPath();
+    ctx.moveTo(anchoMax/2,0);
+    ctx.lineTo(anchoMax/2,alturaMax);
+    ctx.strokeStyle = "#ff0058";
+    ctx.stroke();
+    ctx.closePath();
+}
