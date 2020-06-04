@@ -144,3 +144,17 @@ function cargarResultado() {
 
     document.getElementById("dist").value = can + " " + un;
 }
+
+function dibujarCirCuad(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var Xmax = canvas.width;
+    var Ymax = canvas.height;
+    var margen = 5;
+    ctx.fillStyle = "#531891";
+    ctx.fillRect(0+margen,Ymax-40-margen,40,40);
+
+    ctx.arc(Xmax/2,Ymax/2,20,0,2*Math.PI);
+    ctx.stroke();
+    ctx.fill();
+}
